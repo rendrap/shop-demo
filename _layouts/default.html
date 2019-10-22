@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body data-rsssl=1 class="home page-template page-template-templates page-template-page-homepage page-template-templatespage-homepage-php page page-id-2 wp-schema-pro-1.4.0 elementor-default">
+
+    <div id="page">
+
+      {%- include header.html -%}
+
+      <main id="content">
+          {{ content }}
+      </main>
+
+      {%- include footer.html -%}
+  </div>
+
+  </body>
+
+</html>
