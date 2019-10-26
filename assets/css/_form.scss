@@ -1,0 +1,221 @@
+.btn {
+  font-size: rem(14px);
+  height: $input-height;
+  line-height: $input-height - 2;
+  white-space: nowrap;
+  padding: 0 20px;
+  text-decoration: none !important;
+  display: inline-block;
+  font-weight: bold;
+  //-webkit-font-smoothing: antialiased;
+  text-align: center;
+  text-shadow: none;
+  border: 1px solid transparent;
+  position: relative;
+  border-radius: 0;
+  @include st-transition();
+
+  &.btn-block,
+  &.btn-fullwidth {
+    width: 100% !important;
+  }
+
+  &.btn-sm {
+    height: 22px;
+    line-height: 20px;
+    padding: 0 10px;
+  }
+
+  &.btn-md {
+    height: 37px;
+    line-height: 35px;
+  }
+
+  &.btn-orange {
+    background-color: $orange;
+    border-color: #ef7621;
+    color: #fff;
+
+    &:hover {
+      background-color: #d65b05;
+    }
+
+    &:focus,
+    &:active {
+      background-color: #f08336;
+    }
+
+    @include hover-focus-active() {
+      color: #fff;
+    }
+  }
+
+  &.btn-black {
+    background-color: $black;
+    color: #fff;
+
+    &:hover {
+      background-color: #d65b05;
+    }
+
+    &:focus,
+    &:active {
+      background-color: #f08336;
+    }
+
+    @include hover-focus-active() {
+      color: #fff;
+    }
+  }
+
+  &.btn-white {
+    background-color: #fff;
+    border-color: #ef7621;
+    color: #000;
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    &:focus,
+    &:active {
+      background-color: #f08336;
+    }
+
+    @include hover-focus-active() {
+      color: #fff;
+    }
+
+    &.orange {
+      color: $orange;
+
+      @include hover-focus-active() {
+        background-color: #fff;
+        color: $orange;
+      }
+    }
+  }
+
+  &.btn-link {
+    color: $orange;
+    border-radius: $input-height / 2;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+      border: 0;
+      height: auto;
+      line-height: 1;
+    }
+
+    &:focus,
+    &:active {
+      background-color: #f08336;
+      color: #fff;
+    }
+
+    @include hover-focus-active() {
+      border-color: #ef7621;
+    }
+  }
+}
+
+span.btn {
+  cursor: default !important;
+}
+
+.select-holder {
+  $pl: 25px;
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  background: #fff url('#{$images}/icons/arrow-down.svg') right 20px center / 18px 11px no-repeat;
+  position: relative;
+  padding-left: $pl;
+
+  .wpcf7-form-control-wrap {
+    margin-bottom: 0;
+  }
+
+  select {
+    padding-left: 0;
+    padding-right: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    width: 100% !important;
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    left: $pl;
+    top: 15px;
+
+    + select {
+      margin-top: 15px;
+    }
+  }
+}
+
+.wpcf7-form {
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  .select-holder {
+    .wpcf7-form-control-wrap {
+      margin-bottom: 0;
+
+      select {
+        padding-top: 20px;
+        height: 71px;
+        line-height: 55px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+    margin-bottom: 35px;
+
+    textarea,
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="search"],
+    input[type="phone"],
+    input[type="date"],
+    input[type="text"],
+    input[type="email"] {
+      border: 0;
+      width: 100%;
+      border-bottom: 1px solid $grey-light;
+      background-color: transparent;
+      font-size: 16px;
+
+      &:focus,
+      &:active {
+        border-color: $orange;
+      }
+    }
+  }
+
+  .astoundify-recaptcha {
+    margin-bottom: 20px;
+  }
+}
