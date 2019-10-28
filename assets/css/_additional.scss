@@ -5,7 +5,7 @@
 
 @media (min-width: 768px) {
     .form {
-        padding:80px 20px;
+        padding:150px 20px;
     }
 }
 
@@ -41,6 +41,13 @@
     }
     #hero-form {
     min-height: 550px;
+
+    h3 {
+        @include media-breakpoint-up(md) {
+        font-size: rem(30px);
+    }
+
+    }
     @include media-breakpoint-up(lg) {
         min-height: 700px;
         }
