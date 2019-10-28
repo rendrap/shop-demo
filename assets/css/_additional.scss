@@ -33,8 +33,16 @@
     fill: currentColor
 }
 
-.section-banner .icon {
-  margin-right: 10px;
-  color: #3dadb2;
-  vertical-align: top
+.section-banner {
+    .icon {
+    margin-right: 10px;
+    color: #3dadb2;
+    vertical-align: top
+    }
+    #hero-form {
+    min-height: 550px;
+    @include media-breakpoint-up(lg) {
+        min-height: 700px;
+        }
+    }
 }
